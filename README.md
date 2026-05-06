@@ -70,8 +70,8 @@ Access the Web UI directly at https://11.54.401.33:8998
 
 > **Personal note:** I've been running this on a single RTX 3090 (24GB VRAM) — it works fine without `--cpu-offload` at that memory size. If you're on a 16GB card, `--cpu-offload` is definitely needed.
 
+> **Personal note:** If you're on WSL2 (Windows Subsystem for Linux), make sure to forward port 8998 to your Windows host so you can access the Web UI from your browser. I use `ssh -L 8998:localhost:8998 <wsl-host>` or just open `localhost:8998` directly if WSL2 networking is set to mirrored mode.
+
 ### Offline Evaluation
 
-For offline evaluation use the offline script that streams in an input wav file and produces an output wav file from the captured output stream. The output file will be the same duration as the input file.
-
-Add `--cpu-offload` to any command below if your GPU has insufficient memory (requires `accele
+For offline evaluation use the offline script that streams in an input wav file and produces an ou
