@@ -19,7 +19,8 @@ RUN uv sync
 
 RUN mkdir -p /app/ssl
 
-EXPOSE 8998
+# Using port 8080 instead of 8998 to avoid conflicts with other local services
+EXPOSE 8080
 
 ENTRYPOINT []
-CMD ["/app/moshi/.venv/bin/python", "-m", "moshi.server", "--ssl", "/app/ssl"]
+CMD ["/app/moshi/.venv/bin/python", "-m", "moshi.server", "--ssl", "/app/ssl", "--port", "8080"]
