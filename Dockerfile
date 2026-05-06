@@ -22,5 +22,8 @@ RUN mkdir -p /app/ssl
 # Using port 8080 instead of 8998 to avoid conflicts with other local services
 EXPOSE 8080
 
+# Set a default log level for easier debugging during local development
+ENV MOSHI_LOG_LEVEL="debug"
+
 ENTRYPOINT []
 CMD ["/app/moshi/.venv/bin/python", "-m", "moshi.server", "--ssl", "/app/ssl", "--port", "8080"]
