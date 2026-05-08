@@ -2,6 +2,10 @@
 
 A fork of NVIDIA/personaplex providing tools for voice-driven persona
 conversion using neural audio processing pipelines.
+
+Personal fork notes:
+- Using this for experimenting with custom voice persona pipelines
+- See experiments/ directory for personal test scripts
 """
 
 __version__ = "0.1.0"
