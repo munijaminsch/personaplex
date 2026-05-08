@@ -78,7 +78,10 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
-addopts = "--cov=personaplex --cov-report=term-missing"
+# Removed --cov flags so a plain `pytest` run doesn't require pytest-cov to be
+# installed. Run `pytest --cov=personaplex --cov-report=term-missing` explicitly
+# when you actually want a coverage report.
+addopts = "-v"
 
 [tool.coverage.run]
 source = ["src/personaplex"]
